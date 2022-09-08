@@ -1,0 +1,25 @@
+header,
+footer {
+    background-color: #adb5bd;
+}
+
+.logo {
+    width: 200px;
+}
+
+.product-thumb {
+    /* max-height: 330px; */
+}
+
+.search-str {
+    font-weight: bold;
+    text-transform: capitalize !important;
+}
+
+.search-icon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 9;
+    color: #adb5bd;
+}

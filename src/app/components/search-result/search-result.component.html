@@ -1,0 +1,19 @@
+<p>Result: <span class="search-str"> {{apiService.searchStr}} </span></p>
+
+<div class="row">
+    <div class="col-md-6 col-sm-6 col-xs-12 mb-3" *ngFor="let item of apiService.searchResults">
+        <div class="card">
+            <img class="card-img-top img-fluid product-thumb" [src]="item.Images.Primary.Large.URL" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"> {{item.ItemInfo.Title.DisplayValue}} </h5>
+                <!-- <p class="card-text"> </p> -->
+                <P *ngIf="item.Offers?.Listings[0]?.Price?.Savings?.DisplayAmount"> Regular Price: {{item.Offers.Listings[0].Price.Savings.DisplayAmount}}</P>
+                <P *ngIf="item.Offers?.Listings[0]?.Price?.DisplayAmount"> Sale Price: {{item.Offers.Listings[0].Price.DisplayAmount}}</P>
+                <div style="text-align: Right">
+                    <!-- <a class="btn btn-primary" routerLink="/details/laptop"> View Detail </a> -->
+                    <a class="btn btn-primary" [href]="item.DetailPageURL" target="_blank"> Shop Now </a>
+                </div>                
+            </div>
+        </div>
+    </div>
+</div>
